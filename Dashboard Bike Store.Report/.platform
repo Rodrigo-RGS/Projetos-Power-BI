@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Dashboard Bike Store"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "186fd0c5-bf85-4d1e-970b-3e035748191b"
+  }
+}

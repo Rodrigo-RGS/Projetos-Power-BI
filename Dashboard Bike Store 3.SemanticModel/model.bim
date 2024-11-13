@@ -14490,11 +14490,6 @@
             "value": "Table"
           }
         ],
-        "changedProperties": [
-          {
-            "property": "Name"
-          }
-        ],
         "columns": [
           {
             "name": "Produto Antigo ",
@@ -14554,11 +14549,6 @@
             "value": "Table"
           }
         ],
-        "changedProperties": [
-          {
-            "property": "Name"
-          }
-        ],
         "columns": [
           {
             "name": "product_name",
@@ -14612,11 +14602,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          }
-        ],
-        "changedProperties": [
-          {
-            "property": "Name"
           }
         ],
         "columns": [

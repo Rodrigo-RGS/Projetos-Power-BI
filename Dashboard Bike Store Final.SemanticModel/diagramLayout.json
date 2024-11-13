@@ -1,0 +1,214 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 1670,
+        "y": 6
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 37,
+            "y": 210
+          },
+          "nodeIndex": "Base Loja",
+          "nodeLineageTag": "b9b52230-8cfb-41b2-9831-9f49add5d9cf",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 299,
+            "y": 0
+          },
+          "nodeIndex": "medidas loja",
+          "nodeLineageTag": "be4c15bc-a0e5-410d-9e8c-779cecfda18a",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 596,
+            "y": 0
+          },
+          "nodeIndex": "ParâmetroVendedorXcategoria ",
+          "nodeLineageTag": "3f53e9d4-7ff2-45e2-874a-93aeaecd0117",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 299,
+            "y": 144
+          },
+          "nodeIndex": "Marcas",
+          "nodeLineageTag": "ae5846e7-a6af-49d8-9897-7cc0058cbdde",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 880,
+            "y": 145.5
+          },
+          "nodeIndex": "Equipes",
+          "nodeLineageTag": "56f11f1b-f90b-472f-aeaf-eabcca9370a2",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 523,
+            "y": 374.5
+          },
+          "nodeIndex": "Categorias",
+          "nodeLineageTag": "4ee8dc00-6c4d-449e-9764-14938734ed16",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1415,
+            "y": 127.5
+          },
+          "nodeIndex": "Lojas",
+          "nodeLineageTag": "61a360b3-32cf-41a7-9f24-595376d1910c",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1755,
+            "y": 0
+          },
+          "nodeIndex": "ItensPedido",
+          "nodeLineageTag": "e240ebca-e5d2-4cce-a18a-eacdf2f3456d",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 2038,
+            "y": 113.5
+          },
+          "nodeIndex": "Acoes",
+          "nodeLineageTag": "31adb754-a305-47fe-8163-a8d7ed026e04",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 2176,
+            "y": 426.5
+          },
+          "nodeIndex": "Ordem",
+          "nodeLineageTag": "a4e02406-63e5-4bfc-a23b-807d1d7eaf15",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 728,
+            "y": 481.75
+          },
+          "nodeIndex": "Produtos",
+          "nodeLineageTag": "df02b87a-60aa-42be-84e3-9a306a3ac6d3",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 2375,
+            "y": 300.875
+          },
+          "nodeIndex": "TMpro",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 2450,
+            "y": 300.875
+          },
+          "nodeIndex": "TMcat",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 2525,
+            "y": 300.875
+          },
+          "nodeIndex": "TMven",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 2600,
+            "y": 300.875
+          },
+          "nodeIndex": "TMloja",
+          "nodeLineageTag": "66d4f69a-9b91-4e5f-a5ce-1f41dea9524f",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

@@ -8,7 +8,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.137.1102.0 (24.10)"
+        "value": "2.138.1004.0 (24.11)"
       },
       {
         "name": "PBI_QueryOrder",
@@ -912,7 +912,7 @@
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Base Loja",
-                    "ConceptualProperty": "Ano"
+                    "ConceptualProperty": "year"
                   }
                 },
                 "State": "Generated",
@@ -928,7 +928,7 @@
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Base Loja",
-                    "ConceptualProperty": "Categorias"
+                    "ConceptualProperty": "category_name"
                   }
                 },
                 "State": "Generated",
@@ -944,7 +944,7 @@
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Base Loja",
-                    "ConceptualProperty": "CodEntrega"
+                    "ConceptualProperty": "code_shipped"
                   }
                 },
                 "State": "Generated",
@@ -967,7 +967,7 @@
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Base Loja",
-                    "ConceptualProperty": "DataExpedicao"
+                    "ConceptualProperty": "shipped_date"
                   }
                 },
                 "SemanticType": "Time",
@@ -1531,7 +1531,7 @@
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Base Loja",
-                    "ConceptualProperty": "DataOrdem"
+                    "ConceptualProperty": "order_date"
                   }
                 },
                 "SemanticType": "Time",
@@ -2091,27 +2091,11 @@
                   }
                 ]
               },
-              "base_loja.genero": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Base Loja",
-                    "ConceptualProperty": "Genero"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "genero": {
-                      "State": "Generated"
-                    }
-                  }
-                ]
-              },
               "base_loja.id_compra": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Base Loja",
-                    "ConceptualProperty": "IdCompra"
+                    "ConceptualProperty": "order_id"
                   }
                 },
                 "State": "Generated",
@@ -2303,7 +2287,7 @@
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Base Loja",
-                    "ConceptualProperty": "QuantidadeVendida"
+                    "ConceptualProperty": "quantity_sold"
                   }
                 },
                 "State": "Generated",
@@ -2458,7 +2442,7 @@
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Base Loja",
-                    "ConceptualProperty": "ValorVenda"
+                    "ConceptualProperty": "sale_value"
                   }
                 },
                 "State": "Generated",
@@ -2487,7 +2471,7 @@
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Base Loja",
-                    "ConceptualProperty": "VendedorSobrenome"
+                    "ConceptualProperty": "last_name"
                   }
                 },
                 "State": "Generated",
@@ -2510,7 +2494,7 @@
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Base Loja",
-                    "ConceptualProperty": "Vendendor"
+                    "ConceptualProperty": "first_name"
                   }
                 },
                 "State": "Generated",
@@ -2518,6 +2502,16 @@
                   {
                     "vendendor": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Vendedor": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -4470,7 +4464,9 @@
                 },
                 "State": "Generated",
                 "Terms": [
-                  {},
+                  {
+                    "": {}
+                  },
                   {
                     "location": {
                       "Source": {
@@ -12009,7 +12005,7 @@
     "relationships": [
       {
         "name": "d3de4102-5a65-478f-bddb-ed85ceeaa58c",
-        "fromColumn": "DataOrdem",
+        "fromColumn": "order_date",
         "fromTable": "Base Loja",
         "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
@@ -12017,7 +12013,7 @@
       },
       {
         "name": "609ebe95-b364-4459-8217-6f1582988c9b",
-        "fromColumn": "DataExpedicao",
+        "fromColumn": "shipped_date",
         "fromTable": "Base Loja",
         "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
@@ -12111,25 +12107,25 @@
         "toTable": "Lojas"
       },
       {
-        "name": "AutoDetected_c5ccf7b8-4d4a-4c4b-916e-90e709239441",
-        "fromColumn": "store_id",
-        "fromTable": "TMloja",
-        "toColumn": "store_id",
-        "toTable": "Lojas"
-      },
-      {
-        "name": "AutoDetected_840b50bc-5d9d-43fd-876c-8f5395018546",
-        "crossFilteringBehavior": "bothDirections",
-        "fromColumn": "first_name",
-        "fromTable": "TMloja",
-        "toColumn": "first_name",
-        "toTable": "Equipes"
-      },
-      {
         "name": "73ccac22-1682-d142-0e17-9f7779f09fed",
         "fromColumn": "store_id",
         "fromTable": "Base Loja",
         "toColumn": "staff_id",
+        "toTable": "Equipes"
+      },
+      {
+        "name": "38776bc6-53ed-82e7-bf56-4377edc0fe89",
+        "fromColumn": "category_name",
+        "fromTable": "Base Loja",
+        "toColumn": "category_name",
+        "toTable": "Categorias"
+      },
+      {
+        "name": "b20779ae-4150-d83a-a856-ba4819d7e422",
+        "fromColumn": "first_name",
+        "fromTable": "Base Loja",
+        "isActive": false,
+        "toColumn": "first_name",
         "toTable": "Equipes"
       }
     ],
@@ -12354,7 +12350,7 @@
         ],
         "columns": [
           {
-            "name": "IdCompra",
+            "name": "order_id",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -12364,11 +12360,11 @@
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "64e601b0-6591-4a5f-bbc9-5d1f318311e9",
-            "sourceColumn": "IdCompra",
+            "sourceColumn": "order_id",
             "summarizeBy": "sum"
           },
           {
-            "name": "VendedorSobrenome",
+            "name": "last_name",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -12377,24 +12373,11 @@
             ],
             "dataType": "string",
             "lineageTag": "43e5a6f9-b635-44c0-9081-5f6157f1e20e",
-            "sourceColumn": "VendedorSobrenome",
+            "sourceColumn": "last_name",
             "summarizeBy": "none"
           },
           {
-            "name": "Genero",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "386a99bf-dc55-4ab5-9642-cd255a5771b5",
-            "sourceColumn": "Genero",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "QuantidadeVendida",
+            "name": "quantity_sold",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -12407,11 +12390,11 @@
             ],
             "dataType": "double",
             "lineageTag": "56c2042d-6569-49b1-aa1a-1cbfd8322d4c",
-            "sourceColumn": "QuantidadeVendida",
+            "sourceColumn": "quantity_sold",
             "summarizeBy": "sum"
           },
           {
-            "name": "ValorVenda",
+            "name": "sale_value",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -12425,11 +12408,11 @@
             "dataType": "decimal",
             "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
             "lineageTag": "46630eaf-1158-47dc-87c0-a0e6267b4de8",
-            "sourceColumn": "ValorVenda",
+            "sourceColumn": "sale_value",
             "summarizeBy": "sum"
           },
           {
-            "name": "CodEntrega",
+            "name": "code_shipped",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -12438,11 +12421,11 @@
             ],
             "dataType": "string",
             "lineageTag": "f1c7f9cb-40db-46eb-abbe-38c9a7853e4b",
-            "sourceColumn": "CodEntrega",
+            "sourceColumn": "code_shipped",
             "summarizeBy": "none"
           },
           {
-            "name": "DataOrdem",
+            "name": "order_date",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -12456,7 +12439,7 @@
             "dataType": "dateTime",
             "formatString": "Long Date",
             "lineageTag": "aa940f45-e09b-442c-903e-5933c6bded3e",
-            "sourceColumn": "DataOrdem",
+            "sourceColumn": "order_date",
             "summarizeBy": "none",
             "variations": [
               {
@@ -12471,7 +12454,7 @@
             ]
           },
           {
-            "name": "DataExpedicao",
+            "name": "shipped_date",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -12481,7 +12464,7 @@
             "dataType": "dateTime",
             "formatString": "General Date",
             "lineageTag": "e54a643d-de5f-4f48-aca5-38d1d6ab226d",
-            "sourceColumn": "DataExpedicao",
+            "sourceColumn": "shipped_date",
             "summarizeBy": "none",
             "variations": [
               {
@@ -12496,7 +12479,7 @@
             ]
           },
           {
-            "name": "Ano",
+            "name": "year",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -12506,7 +12489,7 @@
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "90d705ec-821f-413b-ba50-b53fbbb676a8",
-            "sourceColumn": "Ano",
+            "sourceColumn": "year",
             "summarizeBy": "sum"
           },
           {
@@ -12523,7 +12506,7 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Categorias",
+            "name": "category_name",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -12532,11 +12515,11 @@
             ],
             "dataType": "string",
             "lineageTag": "0e1e8722-18cb-4eda-84f6-4abf28f84168",
-            "sourceColumn": "Categorias",
+            "sourceColumn": "category_name",
             "summarizeBy": "none"
           },
           {
-            "name": "Vendendor",
+            "name": "first_name",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -12545,7 +12528,7 @@
             ],
             "dataType": "string",
             "lineageTag": "bca734af-d2a1-49dc-b01a-670fc14342ce",
-            "sourceColumn": "Vendendor",
+            "sourceColumn": "first_name",
             "summarizeBy": "none"
           },
           {
@@ -12601,9 +12584,11 @@
                 "    #\"Consultas Mescladas3\" = Table.NestedJoin(#\"Duplicatas Removidas\", {\"Vendendor\"}, TMloja, {\"first_name\"}, \"TMloja\", JoinKind.LeftOuter),",
                 "    #\"TMloja Expandido\" = Table.ExpandTableColumn(#\"Consultas Mescladas3\", \"TMloja\", {\"store_id\"}, {\"TMloja.store_id\"}),",
                 "    #\"Colunas Reordenadas3\" = Table.ReorderColumns(#\"TMloja Expandido\",{\"IdCompra\", \"product_name\", \"Categorias\", \"Vendendor\", \"TMloja.store_id\", \"VendedorSobrenome\", \"Genero\", \"QuantidadeVendida\", \"ValorVenda\", \"CodEntrega\", \"DataOrdem\", \"DataExpedicao\", \"Ano\"}),",
-                "    #\"Colunas Renomeadas4\" = Table.RenameColumns(#\"Colunas Reordenadas3\",{{\"TMloja.store_id\", \"store_id\"}})",
+                "    #\"Colunas Renomeadas4\" = Table.RenameColumns(#\"Colunas Reordenadas3\",{{\"TMloja.store_id\", \"store_id\"}, {\"Categorias\", \"category_name\"}, {\"Vendendor\", \"first_name\"}, {\"VendedorSobrenome\", \"last_name\"}}),",
+                "    #\"Colunas Removidas4\" = Table.RemoveColumns(#\"Colunas Renomeadas4\",{\"Genero\"}),",
+                "    #\"Colunas Renomeadas5\" = Table.RenameColumns(#\"Colunas Removidas4\",{{\"DataOrdem\", \"order_date\"}, {\"DataExpedicao\", \"shipped_date\"}, {\"IdCompra\", \"order_id\"}, {\"Ano\", \"year\"}, {\"CodEntrega\", \"code_shipped\"}, {\"QuantidadeVendida\", \"quantity_sold\"}, {\"ValorVenda\", \"sale_value\"}})",
                 "in",
-                "    #\"Colunas Renomeadas4\""
+                "    #\"Colunas Renomeadas5\""
               ],
               "type": "m"
             }
@@ -12804,7 +12789,7 @@
             "name": "LocalDateTable_91149985-7015-4cf8-bc7a-2e2894e3d2df",
             "mode": "import",
             "source": {
-              "expression": "Calendar(Date(Year(MIN('Base Loja'[DataOrdem])), 1, 1), Date(Year(MAX('Base Loja'[DataOrdem])), 12, 31))",
+              "expression": "Calendar(Date(Year(MIN('Base Loja'[order_date])), 1, 1), Date(Year(MAX('Base Loja'[order_date])), 12, 31))",
               "type": "calculated"
             }
           }
@@ -13005,7 +12990,7 @@
             "name": "LocalDateTable_72a3d1d7-4ea3-423e-85f8-e5b4288fb4eb",
             "mode": "import",
             "source": {
-              "expression": "Calendar(Date(Year(MIN('Base Loja'[DataExpedicao])), 1, 1), Date(Year(MAX('Base Loja'[DataExpedicao])), 12, 31))",
+              "expression": "Calendar(Date(Year(MIN('Base Loja'[shipped_date])), 1, 1), Date(Year(MAX('Base Loja'[shipped_date])), 12, 31))",
               "type": "calculated"
             }
           }
@@ -13034,7 +13019,7 @@
                 "value": "{\"currencyCulture\":\"pt-BR\"}"
               }
             ],
-            "expression": "sum('Base Loja'[ValorVenda])",
+            "expression": "sum('Base Loja'[sale_value])",
             "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
             "lineageTag": "44002ca9-076e-4008-b4a3-e0dbe6ac1ae8"
           },
@@ -13046,12 +13031,12 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "expression": "sum('Base Loja'[QuantidadeVendida])",
+            "expression": "sum('Base Loja'[quantity_sold])",
             "lineageTag": "7e17a4cd-0560-467f-a1ed-844a30cccbdd"
           },
           {
             "name": "Numero de Vendas",
-            "expression": "COUNT('Base Loja'[IdCompra])",
+            "expression": "COUNT('Base Loja'[order_id])",
             "formatString": "0",
             "lineageTag": "9a486a94-da3b-4480-8e58-a00d9ab418ae"
           },
@@ -13174,8 +13159,8 @@
             "source": {
               "expression": [
                 "{",
-                "    (\"Categoria\", NAMEOF('Base Loja'[Categorias]), 0),",
-                "    (\"Vendendor\", NAMEOF('Base Loja'[Vendendor]), 1)",
+                "    (\"Categoria\", NAMEOF('Base Loja'[category_name]), 0),",
+                "    (\"Vendendor\", NAMEOF('Base Loja'[first_name]), 1)",
                 "}"
               ],
               "type": "calculated"
@@ -14689,7 +14674,7 @@
             "formatString": "0",
             "lineageTag": "fcaf7926-7deb-4e87-8f22-d290a880fa39",
             "sourceColumn": "store_id",
-            "summarizeBy": "none"
+            "summarizeBy": "sum"
           }
         ],
         "lineageTag": "66d4f69a-9b91-4e5f-a5ce-1f41dea9524f",
